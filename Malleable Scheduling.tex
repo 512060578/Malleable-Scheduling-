@@ -8,19 +8,6 @@
 \usepackage{amsmath}
 \usepackage{textcomp}
 \geometry{a4paper,left=3cm,right=3cm,top=2cm,bottom=2cm}
-\lstset{
- columns=fullflexible,       
- numbers=left,                                      
- numberstyle=\tiny\color{gray},                    
- frame=single,                                
- backgroundcolor=\color[RGB]{245,245,244},
- numberstyle=\footnotesize\color{darkgray},
- breaklines=true,           
- commentstyle=\it\color[RGB]{0,96,96},
- stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},
- xleftmargin=2em,xrightmargin=2em, aboveskip=2em,
- framexleftmargin=2em
-}
 \author{}
 \date{July 2020}
 \title{Malleable Task Scheduling}
@@ -29,9 +16,32 @@
     \maketitle
     \section{Related Work}
 
-    bla \cite{Shimada2019Nov}
-	
-
+    The problem of malleable task scheduling has been studied for more than thirty years. Du and Leung 		 
+	\cite{du1989complexity} have proved that the problem is strongly NP-hard for more than 5 processors.
+	Turek \cite{turek1992approximate} has first addressed the approximation algorithms with a ratio 2,
+	which was improved to $\sqrt{3}$ in \cite{mounie1999efficient} and 3/2 in \cite{mounie20023}.
+	\newline
+	\newline
+	Several discussed the problem with precedence constraint \cite{Gunther2009Sep}\cite{Jansen2006Jul}
+	\cite{Jansen2012Jan}\cite{Nishikawa2018Nov}. Du and Leung\cite{du1989complexity} proved that malleable 
+	task scheduling with precedence constraints with more than 3 precessors is NP-hard. Jansen and Klaus
+	\cite{Jansen2006Jul} developed an approximation algorithm with ratio 4.730598 in 2005, which deciding 
+	the numbers of processors allotted to execute the tasks such that the maximum between both opposite 
+	criteria of critical path length and average work in the first phase. In the second phase, it 
+	generates a new allotment and to schedule all tasks according to the precedence constraints.
+	The approximation ratio is improved to 3.291919 in \cite{Jansen2012Jan} which implements linear 
+	program and a variant of the list scheduling algorithm. Wu \cite{WuXiaohu2015AfSM} discussed the 
+	problem while the task is deadline-sensitive which aims to maximize social welfare and minimize 
+	machine number and the maximum weighted completion time. Dynamic programming is implemented for 
+	social welfare maximization and greedy programming for social welfare maximization.
+	\newline
+	\newline
+	\cite{Nishikawa2018Nov} and \cite{Shimada2019Nov} discussed Malleable Fork-Join (MFJ) tasks which
+	aims to minimize the overall schedule length. Nishikawa\cite{Nishikawa2018Nov} apply Integer linear 
+	programming (ILP) and constraint programming (CP) and the result shows that CP-based scheduling for 	
+	malleable fork-join tasks can quickly obtain the better schedules than ILP-based. Shimada's algorithm 
+	\cite{Shimada2019Nov} improved the performance while when the system has a large number of cores
+	but failed to find good results for large task graphs in a practical time.
 	\bibliographystyle{plain}
 	\bibliography{ref}
 	
