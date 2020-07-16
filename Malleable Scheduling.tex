@@ -30,18 +30,18 @@
 	criteria of critical path length and average work in the first phase. In the second phase, it 
 	generates a new allotment and to schedule all tasks according to the precedence constraints.
 	The approximation ratio is improved to 3.291919 in \cite{Jansen2012Jan} which implements linear 
-	program and a variant of the list scheduling algorithm. Wu \cite{WuXiaohu2015AfSM} discussed the 
+	program and a variant of the list scheduling algorithm and still have potentialfor further application in practice. Wu discussed the 
 	problem while the task is deadline-sensitive which aims to maximize social welfare and minimize 
 	machine number and the maximum weighted completion time. Dynamic programming is implemented for 
-	social welfare maximization and greedy programming for social welfare maximization.
+	social welfare maximization and greedy programming for social welfare maximization\cite{WuXiaohu2015AfSM}.
 	\newline
 	\newline
-	\cite{Nishikawa2018Nov} and \cite{Shimada2019Nov} discussed Malleable Fork-Join (MFJ) tasks which
-	aims to minimize the overall schedule length. Nishikawa\cite{Nishikawa2018Nov} apply Integer linear 
+	Nishikawa and Shimada discussed Malleable Fork-Join (MFJ) tasks which
+	aims to minimize the overall schedule length.\cite{Nishikawa2018Nov}\cite{Shimada2019Nov} Nishikawa apply Integer linear 
 	programming (ILP) and constraint programming (CP) and the result shows that CP-based scheduling for 	
-	malleable fork-join tasks can quickly obtain the better schedules than ILP-based. Shimada's algorithm 
-	\cite{Shimada2019Nov} improved the performance while when the system has a large number of cores
-	but failed to find good results for large task graphs in a practical time.
+	malleable fork-join tasks can quickly obtain the better schedules than ILP-based\cite{Nishikawa2018Nov}. Shimada's algorithm 
+	 improved the performance while when the system has a large number of cores
+	but failed to find good results for large task graphs in a practical time\cite{Shimada2019Nov}.
 	\bibliographystyle{plain}
 	\bibliography{ref}
 	
